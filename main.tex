@@ -13,6 +13,7 @@
 \authorrunning{Silva, Sousa, Santos, Costa, Araújo, Formosinho and Cabrita}
 
 \newacronym{uav}{UAV}{Unmanned Aerial Vehicle}
+\newacronym{milp}{MILP}{Mixed Integer Linear Programming}
 
 \bibliographystyle{splncs04}
 
@@ -244,6 +245,19 @@ Academic production for the fire suppression topic has remained somewhat constan
 \section{State of the Art}
 
 \subsection{Autonomous \acrshort{uav}}
+
+\acrshort{uav} are a technology with the potential to solve a variety of issues across various industries. The last decade has shown an increased interest and investment in \acrshort{uav} and it's autonomous operation. Has such, a variety of important developments have been made in drone communication, routing, efficiency and applications.
+
+\subsubsection{Energy Consumption}
+
+One of the foremost limiting factors of \acrshort{uav} utilization is their restricted energy capacity and it's management \cite{8255733}. The flight duration of \acrshort{uav} is impacted by their respective battery capacity and payload (including sensors and communication devices) \cite{8579209}.
+
+In order to resolve this factor, energy consumption modelling is used to optimize battery usage and vehicle weight. Such techniques include (but are not limited to):
+
+\begin{itemize}
+	\item Empirical model based on energy consumption at variable speeds \cite{inproceedings1}
+	\item Heuristic model using \acrfull{milp} which takes into account collision, grounding, fuel efficiency and communication constraints \cite{Grotli2012} 
+\end{itemize}
 
 \subsection{Fire Detection}
 
