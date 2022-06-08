@@ -366,7 +366,25 @@ Fire Detection and Suppression systems have various applications, throughout man
 \end{itemize}
 
 \section{Our Work}
-\section{Conclusion}
+
+Finally, and juxtaposing our working to the research presented in this article, we now attempt to provide an overview of the system we are attempting to develop as part of this project.
+
+The in-development system is composed of two multi-agent systems, based each one task:
+
+\begin{itemize}
+	\item Scanning Tasks, where \acrshort{uav} are tasked with surveying a given section of land, attempting to detect fires. This system is built on a competitive architecture, where each agent "bids" on a given tasks, taking into account their sensor capabilities and flying range, among other factors. These agents then survey the field, and provide data to the "auctioneer", which can then request a more in-depth survey or creates a task for the other system
+	\item Suppression Tasks, where a subset of \acrshort{uav} with fire suppression capabilities are tasked with attempting to suppress a previously detected fire. This system is built on a competitive architecture as well, where each agent "bids" on a given tasks, taking into account their fire fighting capabilities and flying range, among other factors. These agents then locate themselves to the fire location and perform their fire suppression routine
+\end{itemize}
+
+We exemplify this architecture in the following diagram.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{images/model.png}
+	\caption{In-development System Diagram}
+	\label{fig:figure1}
+\end{figure}
+
 
 \bibliography{refs}
 
