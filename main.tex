@@ -1,6 +1,7 @@
 \documentclass[runningheads]{llncs}
 
 
+\usepackage{textcomp}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -15,6 +16,7 @@
 \newacronym{uav}{UAV}{Unmanned Aerial Vehicle}
 \newacronym{milp}{MILP}{Mixed Integer Linear Programming}
 \newacronym{madrl}{MADRL}{Multi-Agent Deep Reinforcement Learning}
+\newacronym{lidar}{LIDAR}{Light Detection And Ranging}
 
 \bibliographystyle{splncs04}
 
@@ -59,17 +61,17 @@ With this increase in data availability, new methodologies and heuristics are re
 
 \subsection{Autonomous \acrshort{uav}}
 
-\acrshort{uav} were arguably first developed in Austria during the blockade of the Republic of Venice in 1849. During this blockade, Austrian forces launched several unnamed balloons carrying timed explosives \todo{cite future of drone use by bart custers, page 355}. From that point on, various developments have improved the capabilities and viability of \acrshort{uav} usage, including the advent of ground controlled aerial vehicles and increased technological capabilities in these vehicles. In this article we will provide a brief overview of the state of the art for \acrshort{uav}, with a special focus on existing developments into autonomous vehicles.
+\acrshort{uav} were arguably first developed in Austria during the blockade of the Republic of Venice in 1849. During this blockade, Austrian forces launched several unnamed balloons carrying timed explosives \cite{Custers_2016}. From that point on, various developments have improved the capabilities and viability of \acrshort{uav} usage, including the advent of ground controlled aerial vehicles and increased technological capabilities in these vehicles. In this article we will provide a brief overview of the state of the art for \acrshort{uav}, with a special focus on existing developments into autonomous vehicles.
 
 \subsection{Fire Detection}
 
-Fire is a menace to the well being of managed forests, and it's late detection can make fire suppression arduous or even impossible, which leads to damage to the environment and atmosphere, as well as further long term consequences. \todo{add statistic regarding forest loss to fires}
+Fire is a menace to the well being of managed forests, and it's late detection can make fire suppression arduous or even impossible, which leads to damage to the environment and atmosphere, as well as further long term consequences. According to the United States Fire Administration, in 2019 there was an increase of 74.5\% in monetary loss to fires when compared to 2010, with an overall value of 14.8 billion dollars \cite{USFA_2022}.
 
 As such, early detection is extremely important in order to maintain a healthy forest ecosystem. In this article, we will provide an overview on the state of the art techniques used to quickly and accurately detect fires in natural environments.
 
 \subsection{Fire Suppression}
 
-As mentioned previously, fire suppression is extremely important to sustain a forest ecosystem as part of an industrial lumber operation. Furthermore, the development of the state of a fire can lead to increase cost to suppress said fire, including subsequent costs related to loss of materials \todo{get citation}. In this article we will provide an overview on techniques and tools used for quickly and efficiently suppress fires.
+As mentioned previously, fire suppression is extremely important to sustain a forest ecosystem as part of an industrial lumber operation. Furthermore, the development of the state of a fire can lead to increase cost to suppress said fire, including subsequent costs related to loss of materials \cite{Knowling_2016}. In this article we will provide an overview on techniques and tools used for quickly and efficiently suppress fires.
 
 \subsection{Autonomous \acrshort{uav} in Foresting}
 
@@ -298,9 +300,48 @@ The latter task has seen some innovations with regards to multi-agent systems, w
 	\item \acrfull{madrl} centralized and decentralized systems used for cooperative tracking guidance and confrontation \cite{ZHOU2022100} \cite{article23}
 \end{itemize}
 
-\subsection{Fire Detection}
+\subsection{Fire Detection and Suppression}
 
-\subsection{Fire Suppression}
+Fire detection and suppression is an intricate topic with a large number of available techniques to solve both of these issues such as \cite{do8}:
+
+\begin{itemize}
+	\item fire weather forecasting and fuel and moisture estimates
+	\item visual detection using:
+	\begin{itemize}
+		\item watch towers
+		\item optical smoke detection
+		\item spotter planes
+	\end{itemize}
+	\item lightning detectors
+	\item infrared cameras
+	\item mobile phone calls for fire detection by the population
+\end{itemize}
+
+And:
+
+\begin{itemize}
+	\item water tankers
+	\item controlled burning
+	\item education for home owners and others
+\end{itemize}
+
+Detection systems are usually separated into two groups \cite{do8}:
+
+\begin{itemize}
+	\item volunteer reporting of fires
+	\item operational detection systems such has fire towers and aerial patrols
+\end{itemize}
+
+For this project, we focused on the fire detection techniques which are usable by a \acrshort{uav}. This includes sensors such has \cite{NationalSlovakia}:
+
+\begin{itemize}
+	\item light spectrum cameras, which can recognize smoke in the day and the fire during the night
+	\item infrared cameras, which detect fires based on their thermal output
+	\item infrared spectrometers, which identify the spectral characteristics of smoke
+	\item \acrfull{lidar} systems, which detect smoke particles in the air
+\end{itemize}
+
+For fire suppression, and based on the constraints applied by our project, we have found that pressurized agents such as DuPont\texttrademark \space FE-36\texttrademark (HFC-236fa) \cite{DuPontFluoroproducts} and CO\textsubscript{2} will be the state of the art solutions. Other such solutions also include, water or sand deployments via large aircraft or ground vehicles - however, due to the nature of this project, such solutions were not further explored. However, complete fire suppression is not expected in general \cite{Knowling_2016}.
 
 \section{Applications}
 
