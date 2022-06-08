@@ -36,9 +36,9 @@ João Santos\inst{1} \and Nuno Costa\inst{1} \and\\ José Araújo\inst{1} \and D
 
 This article presents an overview of the state of the art regarding the application of machine learning powered robotic apparatus and multi agent systems for fire detection and suppression in an industrial context.
 
-\todo{Finish abstract}
+Throughout this article we explore areas of interest, the state of the art, applications and our proposed project for the main focus areas of fire detection, fire suppression and deployment of autonomous \acrshort{uav}.
 
-\keywords{Fire Detection  \and Fire Suppression.}
+\keywords{Fire Detection \and Fire Suppression.}
 
 \end{abstract}
 
@@ -47,15 +47,11 @@ This article presents an overview of the state of the art regarding the applicat
 
 All industrial operations are founded on a production model, whereas each independent operation produces a given product \cite{industrymwd}. Specifically, we see this model applied in natural resource extraction, where a given industrial operation extracts a raw material from the environment, creating value from said extraction.
 
-\todo{add wood industry size statistics}
-
 One such example is the lumber industry, which focuses on the process of obtaining wood from trees. This process is usually destructive and requires special attention to sustain a stable raw material output. In order to do this, these operations usually undertake constructive actions to plant trees, in order to sustain a tree production cycle of 10 years or more that guarantees a steady availability of trees suitable for extraction \cite{lumber}.
 
 These actions however require however not only an initial effort but a continuous attention to the state of the environment in order to guarantee and further improve the yield of said actions. Attention must be paid to, for example, fire risks within the managed timber land.
 
-In order to detect these fires or other situations that may pose a risk to the forest, aerial surveillance is usually employed, in order to quickly scan large swaths of land. \todo{include data regarding usage of planes vs uav?}
-
-With the advent of the Industry 4.0, this data gathering can be increased significantly in both volume and scope, further improving its usefulness and availability \cite{Hood_Brady_2016}.
+In order to detect these fires or other situations that may pose a risk to the forest, aerial surveillance is usually employed, in order to quickly scan large swaths of land. With the advent of the Industry 4.0, this data gathering can be increased significantly in both volume and scope, further improving its usefulness and availability \cite{Hood_Brady_2016}.
 
 With this increase in data availability, new methodologies and heuristics are required in order properly capture and process said data in a timely manner. This article provides an overview of the state of the art for \acrshort{uav} usage in the forestry industry, autonomous multi-agent fire detection and suppression systems, while taking into account the expected problems (and possible solutions) that the stated problem may encounter.
 
@@ -83,9 +79,9 @@ All of the aforementioned topics have areas of interest in terms of application 
 
 \subsection{Autonomous \acrshort{uav}}
 
-\acrshort{uav} are an invaluable tool, as they allows actions in environments that are not available to manned vehicles, such has space \todo{cite space missions using uavs}. Unmanned vehicles also come at an decreased cost due to less stringent safety and size constraints, when compared to manned vehicles \todo{cite unmanned vehicles cost vs manned}.
+\acrshort{uav} are an invaluable tool, as they allows actions in environments that are not available to manned vehicles, such has space \cite{drones6010004}. Unmanned vehicles also come at an decreased cost due to less stringent safety and size constraints, when compared to manned vehicles \cite{article12}.
 
-Furthermore, \acrshort{uav} can also be operated in autonomous manner, allowing for these vehicles to perform operations with human supervision rather than operation \todo{cite uav human supervision}.  This mode of operation allows further cost personnel downsizing, increased timetables for drone usage as well as opportunities for standardized coordination between vehicles \todo{cite benefits of autonomous drones}.
+Furthermore, \acrshort{uav} can also be operated in autonomous manner, allowing for these vehicles to perform operations with human supervision rather than operation.  This mode of operation allows further cost personnel downsizing, increased timetables for drone usage as well as opportunities for standardized coordination between vehicles \cite{article12}.
 
 For the forthcoming project, we believe that this possibility for coordination, decrease upfront and recurring costs as well as supervised operational modes for these drones allow for a quickly deployable and expandable system to aid and initiate monitoring operations in foresting environments. As such, we have researched communication technologies, cooperation heuristics between autonomous systems and available technologies in \acrshort{uav} movement, range and data transmission.
 
@@ -359,9 +355,17 @@ Such systems include:
 	\item Spright, a healthcare drone delivery network used in Hutchinson (Kan.) Regional Medical Center to deliver blood, medicine, small medical devices and vaccines \cite{Drees_2021}
 \end{itemize}
 
-
 \subsection{Fire Detection and Suppression}
 
+Fire Detection and Suppression systems have various applications, throughout many climates and countries. Such systems include:
+
+\begin{itemize}
+	\item SERVIR-Himalaya, which uses moderate-resolution Imaging Spectroradiometer imagery from satellites to detect and monitor fires in the Hindu Kush Himalayan region \cite{SERVIR_2012}
+	\item Bee2Fire and FireAI, an all in one solution using AI to perform early fire detection \cite{SilvaPinto_2021}
+	\item FireWatch, a bushfire detection technology over large areas (up to 1000 square kilometers) which is able to reduce burnt area by up to 90\% \cite{FireWatchAustralia_2010}
+\end{itemize}
+
+\section{Our Work}
 \section{Conclusion}
 
 \bibliography{refs}
